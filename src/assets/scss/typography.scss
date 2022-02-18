@@ -41,3 +41,10 @@
   font-size: map-get($fontSizes, anchor);
   color: map-get($projectColors, anchor);
 }
+
+.affiliationText {
+  font-weight: map-get($fontWeights, light);
+  font-size: map-get($fontSizes, anchor);
+  color: map-get($projectColors, header);
+  line-height: map-get($lineHeighths, l1);
+}

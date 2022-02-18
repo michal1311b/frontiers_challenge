@@ -1,6 +1,6 @@
 <template>
   <span class="anchor cursor__pointer d-flex align-center" @click="showHide">
-    Affiliation <i class="arrow down"></i>
+    Affiliation <i class="arrow" :class="[{ down: show }, { up: !show }]"></i>
   </span>
 </template>
 

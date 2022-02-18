@@ -29,7 +29,7 @@
       </AuthorLabels>
     </div>
 
-    <AffiliationContainer />
+    <AffiliationContainer :data="data.editor.affiliations" />
   </div>
 </template>
 

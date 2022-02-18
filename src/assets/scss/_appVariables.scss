@@ -1,0 +1,48 @@
+@import url("https://9d0dd7a648345f19af83-877d2ecaf11b88d5e17327c758e17ef6.ssl.cf2.rackcdn.com/museo-sans-1.0.1/css/museo-sans.css");
+
+$projectColors: (
+  header: #020202,
+  textBody1: #555555,
+  anchor: #00a0d2,
+  appBackground: #e5e5e5,
+  cardBackground: #ffffff,
+);
+
+$projectFont: "MuseoSans";
+
+$fontWeights: (
+  light: 300,
+  medium: 400,
+  bold: 600,
+);
+
+$fontSizes: (
+  header: 24px,
+  textBody1: 15px,
+  textHeader: 20px,
+  anchor: 13px,
+  popupHeader: 18px,
+  popupAnchor: 11px,
+);
+
+$spaces: (
+  s1: 8px,
+  s2: 16px,
+  s3: 24px,
+  s4: 32px,
+  s5: 40px,
+  s6: 48px,
+  s7: 56px,
+  s8: 64px,
+  s9: 72px,
+  s10: 80px,
+);
+
+$lineHeighths: (
+  l0: 17px,
+  l1: 20px,
+  l2: 21px,
+  l3: 22px,
+  l4: 25px,
+  l5: 28px,
+);

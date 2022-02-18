@@ -1,0 +1,43 @@
+.textBody1 {
+  font-weight: map-get($fontWeights, light);
+  font-size: map-get($fontSizes, textBody1);
+  color: map-get($projectColors, textBody1);
+}
+
+.title {
+  font-weight: map-get($fontWeights, bold);
+  font-size: map-get($fontSizes, header);
+  margin: map-get($spaces, s3);
+  line-height: map-get($lineHeighths, l3);
+}
+
+.textHeader {
+  font-weight: map-get($fontWeights, bold);
+  font-size: map-get($fontSizes, textHeader);
+  line-height: map-get($lineHeighths, l5);
+}
+
+.label {
+  @extend .textBody1;
+  font-weight: map-get($fontWeights, bold);
+}
+
+.author {
+  @extend .textBody1;
+  &__name {
+    text-decoration: underline;
+  }
+  &__container {
+    padding: map-get($spaces, s1) 0;
+  }
+}
+
+.cursor__pointer {
+  cursor: pointer;
+}
+
+.anchor {
+  font-weight: map-get($fontWeights, medium);
+  font-size: map-get($fontSizes, anchor);
+  color: map-get($projectColors, anchor);
+}

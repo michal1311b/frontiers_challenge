@@ -1,0 +1,7 @@
+.card {
+  &__container {
+    max-width: 659px;
+    padding: map-get($spaces, s3) map-get($spaces, s4);
+    background-color: map-get($projectColors, cardBackground);
+  }
+}

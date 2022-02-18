@@ -1,0 +1,32 @@
+@import "@/assets/scss/_appVariables.scss";
+@import "@/assets/scss/card.scss";
+@import "@/assets/scss/typography.scss";
+@import "@/assets/scss/arrow.scss";
+
+html,
+body {
+  overflow-y: auto;
+  margin: 0;
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+#app {
+  font-family: $projectFont;
+  background-color: map-get($projectColors, appBackground);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}

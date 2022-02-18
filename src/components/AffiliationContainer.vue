@@ -1,6 +1,7 @@
 <template>
   <div>
-    <AnchorLabel />
+    <AnchorLabel v-on:show="showAffiliation($event)" />
+    <div v-if="openClose">test</div>
   </div>
 </template>
 
@@ -11,6 +12,17 @@ import AnchorLabel from "@/components/typography/AnchorLabel.vue";
 
 @Component({ components: { AnchorLabel } })
 export default class AffiliationContainer extends Vue {
+  protected openClose: boolean;
+
+  constructor() {
+    super();
+    this.openClose = true;
+  }
+
+  showAffiliation(event: boolean) {
+    this.openClose = event;
+  }
+
   @Prop() private data: any;
 }
 </script>

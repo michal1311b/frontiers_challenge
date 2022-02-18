@@ -1,14 +1,29 @@
 <template>
-  <span class="anchor cursor__pointer d-flex align-center">
+  <span class="anchor cursor__pointer d-flex align-center" @click="showHide">
     Affiliation <i class="arrow down"></i>
   </span>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class AnchorLabel extends Vue {}
+export default class AnchorLabel extends Vue {
+  protected show: boolean;
+
+  constructor() {
+    super();
+    this.show = true;
+  }
+
+  showHide(): boolean {
+    this.show = !this.show;
+
+    this.$emit("show", this.show);
+
+    return this.show;
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

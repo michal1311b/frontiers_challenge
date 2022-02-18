@@ -7,7 +7,10 @@
       <TextLabels>Authors</TextLabels>
 
       <AuthorLabels v-for="(author, index) in data.authors" :key="index"
-        >&nbsp;<span class="cursor__pointer author__name">{{ author.fullName }}</span
+        >&nbsp;<span class="cursor__pointer author__name"
+          ><ToolTip
+            >{{ author.fullName }} <span class="tooltiptext">Tooltip text</span></ToolTip
+          ></span
         ><sup>{{ index }}</sup
         >,
       </AuthorLabels>
@@ -41,9 +44,10 @@ import TextHeader from "@/components/typography/TextHeader.vue";
 import TextLabels from "@/components/typography/TextLabels.vue";
 import AuthorLabels from "@/components/typography/AuthorLabels.vue";
 import AffiliationContainer from "@/components/AffiliationContainer.vue";
+import ToolTip from "@/components/ToolTip.vue";
 
 @Component({
-  components: { TextBody1, TextHeader, TextLabels, AuthorLabels, AffiliationContainer },
+  components: { TextBody1, TextHeader, TextLabels, AuthorLabels, AffiliationContainer, ToolTip },
 })
 export default class Card extends Vue {
   @Prop() private data: any;

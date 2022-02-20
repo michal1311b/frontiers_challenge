@@ -24,6 +24,7 @@
             <span class="anchor font-weight--bold">{{ author.followers }}&nbsp;</span>
             <span class="affiliationText">Followers</span>
           </div>
+          <div class="tooltip__viewProfile anchorPopup p-t-2">View profile</div>
         </div>
       </div>
     </div>

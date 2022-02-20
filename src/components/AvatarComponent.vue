@@ -9,7 +9,7 @@ import { createShortcut, getIndex } from "@/extensions/string.extensions";
 
 @Component({})
 export default class AvatarComponent extends Vue {
-  @Prop({ required: true }) readonly text: string;
+  @Prop({ required: true }) readonly text: any;
 
   setLogo(name: string): string {
     return createShortcut(name);

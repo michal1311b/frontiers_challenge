@@ -42,6 +42,12 @@
   color: map-get($projectColors, anchor);
 }
 
+.anchorPopup {
+  @extend .anchor;
+  font-size: map-get($fontSizes, popupAnchor);
+  text-transform: uppercase;
+}
+
 .affiliationText {
   font-weight: map-get($fontWeights, light);
   font-size: map-get($fontSizes, anchor);

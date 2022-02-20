@@ -6,16 +6,15 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
+  max-width: 385px;
+  background-color: map-get($projectColors, cardBackground);
+  padding: map-get($spaces, s2);
 
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.08),
+    0px 14px 28px rgba(0, 0, 0, 0.1);
 }
 
 .tooltip:hover .tooltiptext {

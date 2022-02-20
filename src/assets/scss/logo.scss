@@ -1,0 +1,181 @@
+.logo {
+  &__container {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+}
+
+.animation {
+  &__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+.horizontalLine {
+  width: 100px;
+  height: 3px;
+  background: map-get($projectColors, logoLine);
+
+  -webkit-animation: horizontalLineAnim 1s ease 0s 1 normal forwards;
+  -moz-animation: horizontalLineAnim 1s ease 0s 1 normal forwards;
+  -o-animation: horizontalLineAnim 1s ease 0s 1 normal forwards;
+  animation: horizontalLineAnim 1s ease 0s 1 normal forwards;
+
+  margin-bottom: 4px;
+}
+
+@keyframes logoContainerAnim {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes horizontalLineAnim {
+  0% {
+    transform: scaleX(0.2);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.paper {
+  &__container {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__sheet {
+    opacity: 0;
+    width: 38px;
+    height: 54px;
+    background-color: map-get($projectColors, cardBackground);
+    display: inline-block;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border: 3px solid map-get($projectColors, logoLine);
+
+    -webkit-animation: logoContainerAnim 9s ease 8s 1 normal forwards;
+    -moz-animation: logoContainerAnim 9s ease 8s 1 normal forwards;
+    -o-animation: logoContainerAnim 9s ease 8s 1 normal forwards;
+    animation: logoContainerAnim 9s ease 8s 1 normal forwards;
+  }
+
+  &__arrow {
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent map-get($projectColors, appBackground) transparent
+      transparent;
+    width: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &::after {
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      border: 10px solid map-get($projectColors, cardBackground);
+      border-left: 10px solid map-get($projectColors, cardBackground);
+      border-bottom: 10px solid map-get($projectColors, cardBackground);
+      margin-left: 21px;
+      top: 0;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    right: 5px;
+    top: 17px;
+    bottom: 0;
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    &__line {
+      width: 20px;
+      height: 3px;
+      background-color: black;
+      margin: 4px 0;
+    }
+    z-index: 0;
+  }
+}
+
+.firstPaper {
+  opacity: 0;
+  width: 8px;
+  height: 43px;
+  border-top-color: map-get($projectColors, logoLine);
+  border-style: solid;
+  border-top-width: 3px;
+  border-right-color: map-get($projectColors, logoLine);
+  border-right-width: 0;
+  border-bottom-color: map-get($projectColors, logoLine);
+  border-bottom-width: 3px;
+  border-left-color: map-get($projectColors, logoLine);
+  border-left-width: 3px;
+  display: inline-block;
+  background-color: map-get($projectColors, cardBackground);
+
+  -webkit-animation: logoContainerAnim 6s ease 5s 1 normal forwards;
+  -moz-animation: logoContainerAnim 6s ease 5s 1 normal forwards;
+  -o-animation: logoContainerAnim 6s ease 5s 1 normal forwards;
+  animation: logoContainerAnim 6s ease 5s 1 normal forwards;
+}
+
+.secondPaper {
+  opacity: 0;
+  width: 8px;
+  display: inline-block;
+  height: 50px;
+  border: 3px solid map-get($projectColors, logoLine);
+  background-color: map-get($projectColors, cardBackground);
+
+  -webkit-animation: logoContainerAnim 7s ease 6s 1 normal forwards;
+  -moz-animation: logoContainerAnim 7s ease 6s 1 normal forwards;
+  -o-animation: logoContainerAnim 7s ease 6s 1 normal forwards;
+  animation: logoContainerAnim 7s ease 6s 1 normal forwards;
+}
+
+.success-checkmark:after {
+  content: "✔";
+  position: absolute;
+  right: -13px;
+  top: 17px;
+  bottom: 0;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border: 3px solid map-get($projectColors, tickColor);
+  background: map-get($projectColors, cardBackground);
+  border-radius: 50%;
+  color: map-get($projectColors, tickColor);
+  z-index: 1;
+  opacity: 0;
+
+  -webkit-animation: logoContainerAnim 8s ease 7s 1 normal forwards;
+  -moz-animation: logoContainerAnim 8s ease 7s 1 normal forwards;
+  -o-animation: logoContainerAnim 8s ease 7s 1 normal forwards;
+  animation: logoContainerAnim 8s ease 7s 1 normal forwards;
+}
+
+.paper__sheet > .paper__arrow {
+  border-left-color: map-get($projectColors, logoLine);
+  border-bottom-color: map-get($projectColors, logoLine);
+}

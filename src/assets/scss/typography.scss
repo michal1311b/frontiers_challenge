@@ -48,3 +48,15 @@
   color: map-get($projectColors, header);
   line-height: map-get($lineHeighths, l1);
 }
+
+.font-weight {
+  &--light {
+    font-weight: map-get($fontWeights, light);
+  }
+  &--medium {
+    font-weight: map-get($fontWeights, medium);
+  }
+  &--bold {
+    font-weight: map-get($fontWeights, bold);
+  }
+}

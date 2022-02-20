@@ -33,6 +33,10 @@
     </div>
 
     <AffiliationContainer :data="data.editor.affiliations" />
+
+    <TextBody1 class="font-weight--bold p-t-1"
+      >Journal of {{ data.journal }} | {{ data.section }}</TextBody1
+    >
   </div>
 </template>
 

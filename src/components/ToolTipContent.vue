@@ -1,14 +1,16 @@
 <template>
-  <div class="tooltip__textContainer">
-    <div class="tooltip__headerContainer m-r-1">
-      <div class="tooltip__header">{{ author.fullName }}</div>
-      <div class="tooltip__subheader">
-        {{ author.role }}, {{ affiliationName }}, {{ affiliationCountry }}
+  <div class="d-flex">
+    <div class="tooltip__textContainer">
+      <div class="tooltip__headerContainer m-r-1">
+        <div class="tooltip__header">{{ author.fullName }}</div>
+        <div class="tooltip__subheader">
+          {{ author.role }}, {{ affiliationName }}, {{ affiliationCountry }}
+        </div>
       </div>
-    </div>
 
-    <img :src="author.pictureUrl" class="tooltip__avatar" v-if="author.pictureUrl" />
-    <AvatarComponent :text="author.fullName" v-else />
+      <img :src="author.pictureUrl" class="tooltip__avatar" v-if="author.pictureUrl" />
+      <AvatarComponent :text="author.fullName" v-else />
+    </div>
   </div>
 </template>
 

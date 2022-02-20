@@ -18,6 +18,7 @@ import AffiliationLabel from "@/components/typography/AffiliationLabel.vue";
 
 @Component({ components: { AnchorLabel, AffiliationLabel } })
 export default class AffiliationContainer extends Vue {
+  @Prop() private data: any;
   protected openClose: boolean;
 
   constructor() {
@@ -28,8 +29,6 @@ export default class AffiliationContainer extends Vue {
   showAffiliation(event: boolean) {
     this.openClose = event;
   }
-
-  @Prop() private data: any;
 }
 </script>
 

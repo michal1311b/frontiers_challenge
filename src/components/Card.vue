@@ -19,7 +19,10 @@
     <div class="author__container">
       <TextLabels>Editor</TextLabels>
       <AuthorLabels
-        >&nbsp;<span class="cursor__pointer author__name">{{ data.editor.fullName }}</span
+        >&nbsp;<span class="cursor__pointer author__name"
+          ><ToolTip
+            >{{ data.editor.fullName
+            }}<ToolTipContent :author="data.editor"></ToolTipContent></ToolTip></span
         ><sup>1</sup>
       </AuthorLabels>
     </div>
@@ -27,7 +30,10 @@
     <div class="author__container">
       <TextLabels>Yourself</TextLabels>
       <AuthorLabels
-        >&nbsp;<span class="cursor__pointer author__name">{{ data.yourself.fullName }}</span
+        >&nbsp;<span class="cursor__pointer author__name"
+          ><ToolTip
+            >{{ data.yourself.fullName
+            }}<ToolTipContent :author="data.yourself"></ToolTipContent></ToolTip></span
         ><sup>1</sup>
       </AuthorLabels>
     </div>

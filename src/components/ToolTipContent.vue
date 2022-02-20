@@ -1,15 +1,31 @@
 <template>
-  <div class="d-flex">
+  <div>
     <div class="tooltip__textContainer">
-      <div class="tooltip__headerContainer m-r-1">
-        <div class="tooltip__header">{{ author.fullName }}</div>
-        <div class="tooltip__subheader">
-          {{ author.role }}, {{ affiliationName }}, {{ affiliationCountry }}
+      <div class="tooltip__headerContainer">
+        <div class="tooltip__header p-r-1">
+          {{ author.fullName }}
+          <div class="tooltip__subheader">
+            {{ author.role }}, {{ affiliationName }}, {{ affiliationCountry }}
+          </div>
+        </div>
+        <img :src="author.pictureUrl" class="tooltip__avatar" v-if="author.pictureUrl" />
+        <AvatarComponent :text="author.fullName" v-else />
+
+        <div class="tooltip__statContainer p-t-1">
+          <div>
+            <span class="anchor font-weight--bold">{{ author.publications }}&nbsp;</span>
+            <span class="affiliationText">Publications</span>
+          </div>
+          <div>
+            <span class="anchor font-weight--bold">{{ author.views }}&nbsp;</span>
+            <span class="affiliationText">Views</span>
+          </div>
+          <div>
+            <span class="anchor font-weight--bold">{{ author.followers }}&nbsp;</span>
+            <span class="affiliationText">Followers</span>
+          </div>
         </div>
       </div>
-
-      <img :src="author.pictureUrl" class="tooltip__avatar" v-if="author.pictureUrl" />
-      <AvatarComponent :text="author.fullName" v-else />
     </div>
   </div>
 </template>

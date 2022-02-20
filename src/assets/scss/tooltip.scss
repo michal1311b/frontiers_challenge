@@ -15,8 +15,8 @@
   }
 
   &__headerContainer {
-    width: 100%;
-    min-width: 300px;
+    display: grid;
+    grid-template-columns: 330px 55px;
   }
 
   &__header {
@@ -36,6 +36,11 @@
     height: 56px;
     border-radius: 50%;
     float: left;
+  }
+
+  &__statContainer {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
   }
 }
 

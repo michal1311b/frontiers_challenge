@@ -30,7 +30,10 @@
     <div class="author__container">
       <TextLabels>Yourself</TextLabels>
       <AuthorLabels
-        >&nbsp;<span class="cursor__pointer author__name" @click="showTooltip"
+        >&nbsp;<span
+          class="cursor__pointer author__name"
+          @click="showTooltip"
+          @mouseleave="hideToolTip"
           ><ToolTip
             >{{ data.yourself.fullName
             }}<ToolTipContent :author="data.yourself"></ToolTipContent></ToolTip></span
@@ -81,6 +84,10 @@ export default class Card extends Vue {
 
   showTooltip() {
     store.dispatch("actionStoreShowHint");
+  }
+
+  hideToolTip() {
+    store.dispatch("actionStoreHideHint");
   }
 }
 </script>

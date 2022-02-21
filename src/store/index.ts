@@ -18,10 +18,16 @@ export default new Vuex.Store({
     mutateStoreShowHint(state, data) {
       state.entities.showHint = !state.entities.showHint;
     },
+    mutateStoreHideHint(state, data) {
+      state.entities.showHint = false;
+    },
   },
   actions: {
     actionStoreShowHint(context, data) {
       context.commit("mutateStoreShowHint", data);
+    },
+    actionStoreHideHint(context, data) {
+      context.commit("mutateStoreHideHint", data);
     },
   },
   modules: {},

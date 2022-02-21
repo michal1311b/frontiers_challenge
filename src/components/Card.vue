@@ -7,7 +7,10 @@
       <TextLabels>Authors</TextLabels>
 
       <AuthorLabels v-for="(author, index) in data.authors" :key="index"
-        >&nbsp;<span class="cursor__pointer author__name" @click="showTooltip"
+        >&nbsp;<span
+          class="cursor__pointer author__name"
+          @click="showTooltip"
+          @mouseleave="hideToolTip"
           ><ToolTip
             >{{ author.fullName }}
             <ToolTipContent :author="author"></ToolTipContent></ToolTip></span
@@ -19,7 +22,10 @@
     <div class="author__container">
       <TextLabels>Editor</TextLabels>
       <AuthorLabels
-        >&nbsp;<span class="cursor__pointer author__name" @click="showTooltip"
+        >&nbsp;<span
+          class="cursor__pointer author__name"
+          @click="showTooltip"
+          @mouseleave="hideToolTip"
           ><ToolTip
             >{{ data.editor.fullName
             }}<ToolTipContent :author="data.editor"></ToolTipContent></ToolTip></span

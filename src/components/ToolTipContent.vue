@@ -24,7 +24,7 @@
             <span class="anchor font-weight--bold">{{ author.followers }}&nbsp;</span>
             <span class="affiliationText">Followers</span>
           </div>
-          <div class="tooltip__viewProfile anchorPopup p-t-2">
+          <div class="tooltip__viewProfile anchorPopup p-t-2" @click="showProfile(author.id)">
             <img src="@/assets/shortcut.svg" class="tooltip__viewProfile__icon p-r-1" /> View
             profile
           </div>
@@ -80,6 +80,13 @@ export default class ToolTipContent extends Vue {
       return data;
     }
     return false;
+  }
+
+  showProfile(id: string): void {
+    this.$router.push({
+      name: "profile",
+      params: { id: id },
+    });
   }
 }
 </script>

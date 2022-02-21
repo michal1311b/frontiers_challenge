@@ -143,7 +143,15 @@
   width: 8px;
   display: inline-block;
   height: 50px;
-  border: 3px solid map-get($projectColors, logoLine);
+  border-top-color: map-get($projectColors, logoLine);
+  border-style: solid;
+  border-top-width: 3px;
+  border-right-color: map-get($projectColors, logoLine);
+  border-right-width: 0;
+  border-bottom-color: map-get($projectColors, logoLine);
+  border-bottom-width: 3px;
+  border-left-color: map-get($projectColors, logoLine);
+  border-left-width: 3px;
   background-color: map-get($projectColors, cardBackground);
 
   -webkit-animation: logoContainerAnim 7s ease 6s 1 normal forwards;

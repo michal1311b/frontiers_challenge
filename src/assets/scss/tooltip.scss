@@ -50,6 +50,11 @@
     justify-content: flex-end;
     grid-column-start: 1;
     grid-column-end: 8;
+
+    &__icon {
+      width: 12px;
+      height: 12px;
+    }
   }
 }
 

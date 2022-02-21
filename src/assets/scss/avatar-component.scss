@@ -15,4 +15,7 @@
   text-align: center;
   cursor: pointer;
   float: left;
+  font-weight: map-get($fontWeights, upMedium);
+  font-size: map-get($fontSizes, popupHeader);
+  line-height: map-get($lineHeighths, l4);
 }

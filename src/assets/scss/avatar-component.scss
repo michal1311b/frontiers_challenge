@@ -6,10 +6,12 @@
 }
 
 .logo__icon {
-  color: map-get($projectColors, header);
+  color: map-get($projectColors, avatarColor);
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  border: 1px solid map-get($projectColors, avatarColor);
+  background-color: map-get($projectColors, avatarBackground);
   text-align: center;
   cursor: pointer;
   float: left;

@@ -20,7 +20,7 @@
       <TextBody1
         ><span class="anchor font-weight--bold">{{ author.followers }}</span> Followers</TextBody1
       >
-      <AffiliationContainer :data="author.affiliations" class="" />
+      <AffiliationContainer :data="author.affiliations" class="p-t-2" />
     </div>
   </div>
 </template>

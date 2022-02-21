@@ -8,7 +8,7 @@
             {{ author.role }}, {{ affiliationName }}, {{ affiliationCountry }}
           </div>
         </div>
-        <img :src="author.pictureUrl" class="tooltip__avatar" v-if="author.pictureUrl" />
+        <img :src="author.pictureUrl" class="tooltip__avatar" v-if="showAvatar" />
         <AvatarComponent :text="author.fullName" v-else />
 
         <div class="tooltip__statContainer p-t-1">
@@ -37,9 +37,17 @@ import TextBody1 from "@/components/typography/TextBody1.vue";
 import TextHeader from "@/components/typography/TextHeader.vue";
 import AvatarComponent from "@/components/AvatarComponent.vue";
 
+import { testImage } from "@/services/helpers";
+
 @Component({ components: { TextBody1, TextHeader, AvatarComponent } })
 export default class ToolTipContent extends Vue {
+  protected showAvatar: boolean;
   @Prop() private author: any;
+
+  constructor() {
+    super();
+    this.showAvatar = true;
+  }
 
   get affiliationCity(): string {
     return this.author.affiliations[0].city;
@@ -51,6 +59,24 @@ export default class ToolTipContent extends Vue {
 
   get affiliationName(): string {
     return this.author.affiliations[0].name;
+  }
+
+  created() {
+    this.isImgCorrect();
+  }
+
+  isImgCorrect(): any {
+    return testImage(this.author.pictureUrl).then((response) => {
+      return this.setResponse(response);
+    });
+  }
+
+  setResponse(data: any) {
+    this.showAvatar = data;
+    if (data) {
+      return data;
+    }
+    return false;
   }
 }
 </script>

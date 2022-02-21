@@ -39,17 +39,20 @@
   }
 
   &__statContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-auto-rows: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &__item {
+      flex-grow: 1;
+      width: 100px;
+    }
   }
 
   &__viewProfile {
     width: 100%;
-    display: inline-flex;
-    justify-content: flex-end;
-    grid-column-start: 1;
-    grid-column-end: 8;
+    display: flex;
+    justify-content: end;
 
     &__icon {
       width: 12px;

@@ -12,19 +12,19 @@
         <AvatarComponent :text="author.fullName" v-else />
 
         <div class="tooltip__statContainer p-t-1">
-          <div>
+          <div class="tooltip__statContainer__item">
             <span class="anchor font-weight--bold">{{ author.publications }}&nbsp;</span>
             <span class="affiliationText">Publications</span>
           </div>
-          <div>
+          <div class="tooltip__statContainer__item">
             <span class="anchor font-weight--bold">{{ author.views }}&nbsp;</span>
             <span class="affiliationText">Views</span>
           </div>
-          <div>
+          <div class="tooltip__statContainer__item">
             <span class="anchor font-weight--bold">{{ author.followers }}&nbsp;</span>
             <span class="affiliationText">Followers</span>
           </div>
-          <div class="tooltip__viewProfile anchorPopup p-t-2" @click="showProfile(author.id)">
+          <div class="tooltip__viewProfile anchorPopup p-t-2 p-r-2" @click="showProfile(author.id)">
             <img src="@/assets/shortcut.svg" class="tooltip__viewProfile__icon p-r-1" /> View
             profile
           </div>

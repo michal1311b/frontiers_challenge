@@ -80,7 +80,6 @@ export default class Card extends Vue {
   }
 
   showTooltip() {
-    console.log(111);
     store.dispatch("actionStoreShowHint");
   }
 }

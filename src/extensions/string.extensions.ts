@@ -36,3 +36,12 @@ export function getIndex(text: string): number {
   if (index >= 9) return index % 9;
   return index;
 }
+
+export function setSeparator(current: number, length: number): string {
+  if (current == length - 1) {
+    return ".";
+  } else if (current == length - 2) {
+    return "and";
+  }
+  return ",";
+}

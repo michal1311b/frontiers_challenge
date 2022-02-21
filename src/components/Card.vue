@@ -12,7 +12,7 @@
             >{{ author.fullName }}
             <ToolTipContent :author="author"></ToolTipContent></ToolTip></span
         ><sup>{{ index }}</sup
-        >,
+        >{{ setSign(index, data.authors.length) }}
       </AuthorLabels>
     </div>
 
@@ -57,6 +57,8 @@ import AffiliationContainer from "@/components/AffiliationContainer.vue";
 import ToolTip from "@/components/ToolTip.vue";
 import ToolTipContent from "@/components/ToolTipContent.vue";
 
+import { setSeparator } from "@/extensions/string.extensions";
+
 @Component({
   components: {
     TextBody1,
@@ -70,6 +72,10 @@ import ToolTipContent from "@/components/ToolTipContent.vue";
 })
 export default class Card extends Vue {
   @Prop() private data: any;
+
+  setSign(current: number, length: number): string {
+    return setSeparator(current, length);
+  }
 }
 </script>
 

@@ -7,7 +7,7 @@
       <TextLabels>Authors</TextLabels>
 
       <AuthorLabels v-for="(author, index) in data.authors" :key="index"
-        >&nbsp;<span class="cursor__pointer author__name"
+        >&nbsp;<span class="cursor__pointer author__name" @click="showTooltip"
           ><ToolTip
             >{{ author.fullName }}
             <ToolTipContent :author="author"></ToolTipContent></ToolTip></span
@@ -57,6 +57,8 @@ import AffiliationContainer from "@/components/AffiliationContainer.vue";
 import ToolTip from "@/components/ToolTip.vue";
 import ToolTipContent from "@/components/ToolTipContent.vue";
 
+import store from "@/store/";
+
 import { setSeparator } from "@/extensions/string.extensions";
 
 @Component({
@@ -75,6 +77,11 @@ export default class Card extends Vue {
 
   setSign(current: number, length: number): string {
     return setSeparator(current, length);
+  }
+
+  showTooltip() {
+    console.log(111);
+    store.dispatch("actionStoreShowHint");
   }
 }
 </script>

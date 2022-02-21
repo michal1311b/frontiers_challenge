@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="tooltip__textContainer">
+    <div class="tooltip__textContainer" v-if="showTooltip">
       <div class="tooltip__headerContainer">
         <div class="tooltip__header p-r-1">
           {{ author.fullName }}
@@ -40,6 +40,8 @@ import TextBody1 from "@/components/typography/TextBody1.vue";
 import TextHeader from "@/components/typography/TextHeader.vue";
 import AvatarComponent from "@/components/AvatarComponent.vue";
 
+import store from "@/store/";
+
 import { testImage } from "@/services/helpers";
 
 @Component({ components: { TextBody1, TextHeader, AvatarComponent } })
@@ -62,6 +64,10 @@ export default class ToolTipContent extends Vue {
 
   get affiliationName(): string {
     return this.author.affiliations[0].name;
+  }
+
+  get showTooltip() {
+    return store.getters.getterStoreShowHint;
   }
 
   created() {
